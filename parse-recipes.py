@@ -387,16 +387,12 @@ measurementUnits = ['teaspoons','tablespoons','cups','containers','packets','bag
 # transform amount to cups based on amount and original unit
 #
 def transformToCups(amount, unit):
-	if unit == "cups":
-		return amount
-	elif unit == "quarts":
-		return amount / 16
-	elif unit == "quarts":
-		return amount / 4
+	if unit == "ounces":
+		return amount * 8
 	elif unit == "pints":
 		return amount / 2
-	elif unit == "ounces":
-		return amount * 8
+	elif unit == "quarts":
+		return amount / 16
 	elif unit == "tablespoons":
 		return amount * 16
 	elif unit == "teaspoons":
